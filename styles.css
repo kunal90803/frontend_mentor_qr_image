@@ -1,0 +1,181 @@
+/* 
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background:rgb(165, 216, 227); ;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.bluediv {
+    
+    height: 87%;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+.pic {
+    background: white;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden; 
+    width: 20vw; 
+    height: fit-content; 
+    
+}
+
+img {
+    align-self: center;
+    width: 90%; 
+    height: auto; 
+    border-radius: 5%;
+    
+    margin: 15px;
+}
+
+.pic p {
+    text-align: center;
+    font-size: 1.3rem; 
+    max-width: 90%; 
+    margin: 0 auto; 
+    word-wrap: break-word; 
+}
+.texter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+ */
+
+
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background: rgb(165, 216, 227);
+}
+
+strong {
+    font-weight: 700;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    padding: 1rem; /* Adds padding for smaller screens */
+    gap: 20px;
+}
+
+.bluediv {
+    height: auto; /* Dynamically adjusts to content */
+    width: 90%; /* Reduces width on smaller screens */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    max-width: 600px; /* Limits the size on larger screens */
+    margin: 0 auto; /* Centers content */
+}
+
+.pic {
+    background: white;
+    border-radius: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    width: 80%; /* Scales width based on parent */
+    max-width: 300px; /* Restricts the max size for larger screens */
+    height: fit-content;
+    padding: 1rem; /* Adds inner spacing for content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+img {
+    align-self: center;
+    width: 100%; /* Fully responsive width */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 5%;
+    margin: 0 0 15px 0; /* Adds vertical spacing */
+}
+
+.pic p {
+    text-align: center;
+    font-size: 1.2rem; /* Adjusts font size for readability */
+    max-width: 90%;
+    margin: 0 auto;
+    word-wrap: break-word;
+    color: #333; /* Improves text contrast */
+}
+
+.texter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+
+    .bluediv {
+        width: 100%;
+    }
+
+    .pic {
+        width: 90%; /* Takes more space on smaller screens */
+        max-width: 250px; /* Restricts max size further */
+    }
+
+    .pic p {
+        font-size: 1rem; /* Reduces font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .pic {
+        width: 95%; /* Almost full width on very small screens */
+        max-width: none;
+        
+    }
+
+    .pic p {
+        font-size: 1.4rem; /* Further reduces font size */
+    }
+}
